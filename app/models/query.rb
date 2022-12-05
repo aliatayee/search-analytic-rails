@@ -9,6 +9,6 @@ class Query < ApplicationRecord
                     }
                   }
   validates :query, presence: true
-  validates :query, length: { minimum: 3, maximum: 50 }
+  validates :query, length: { minimum: 3, maximum: 40 }
   validates :user_id, presence: true
 end
