@@ -4,8 +4,8 @@
 <section class="text-gray-400 body-font bg-gray-900 min-h-screen grid content-between">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Grab your most desired package!</h1>
-      <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">Easily find out whatever npm pack you need and toggle over many packages</p>
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Figure out top articles</h1>
+      <p class="lg:w-1/2 w-full leading-relaxed text-opacity-80">Search preciouse articles in real-time and remember your search trends</p>
       <%= form_with(url: articles_search_path, method: :get,class:"lg:w-1/2 md:w-full w-full mt-5" , data: {controller: "search-form", turbo_frame: "articles", turbo_action: "advance"}) do |form| %>
         <label class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
         <div class="relative">
