@@ -27,20 +27,22 @@ class ArticlesController < ApplicationController
 
   def save_query(query, session)
     return if query.nil? || query.length < 3
+
     searched_query = Query.new(user_params)
     searched_query.user_id = session
     saved_query = Query.where(user_id: session)
-    if saved_query.empty?()
+    if saved_query.empty?
       searched_query.save
     else
       similar = saved_query.search_similarity(query)
-      if similar.empty?()
+      if similar.empty?
         searched_query.save
       elsif query.length > similar.first.query.length
         similar.first.update(query:)
       end
     end
   end
+
   def user_params
     params.permit(:query)
   end

@@ -22,5 +22,4 @@ RSpec.describe Query, type: :model do
     query = Query.new(query: 'search')
     expect(query).to_not be_valid
   end
-
 end
