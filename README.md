@@ -9,6 +9,13 @@
 - [ ] Postgresql
 - [ ] TailwindCSS
 
+## screenshots
+![image](https://user-images.githubusercontent.com/74867463/205667659-58455ff3-47f3-40a0-9e95-f0aa6c162d75.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74867463/205668526-bd915562-db7c-472b-b629-dca1d85fd254.png" />
+  <img src="https://user-images.githubusercontent.com/74867463/205668349-c7ff04a2-bd30-4e5f-b324-c205cf82527e.png" />
+</p>
+
 ### Install & Setup
 
 To setup and install this sample AlFa Blog project, follow the below steps:
