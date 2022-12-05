@@ -4,5 +4,6 @@
 
 #articles {
     width: 100%;
-    display: inherit;
+    display: flex;
+    flex-wrap: wrap;
 }
