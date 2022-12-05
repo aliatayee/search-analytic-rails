@@ -20,24 +20,27 @@ class ArticlesController < ApplicationController
     else
       render :index
     end
-    save_search(params[:query], session[:user_id])
+    save_query(params[:query], session[:user_id])
   end
 
   private
 
-  def save_search(query, session)
+  def save_query(query, session)
     return if query.nil? || query.length < 3
-
     searched_query = Query.new(user_params)
     searched_query.user_id = session
-    auth_search = Query.where(user_id: session)
-    if auth_search.nil? || Query.where(user_id: session).search_similarity(query).count <= 0
+    saved_query = Query.where(user_id: session)
+    if saved_query.empty?()
       searched_query.save
-    elsif auth_search.first.query.length < query.length
-      auth_search.first.update(query:)
+    else
+      similar = saved_query.search_similarity(query)
+      if similar.empty?()
+        searched_query.save
+      elsif query.length > similar.first.query.length
+        similar.first.update(query:)
+      end
     end
   end
-
   def user_params
     params.permit(:query)
   end
