@@ -1,0 +1,18 @@
+databases:
+  - name: search-analytic-rails
+    databaseName: search-analytic-rails
+    user: search-analytic-rails
+
+services:
+  - type: web
+    name: search-analytic-rails
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: MY_APP_DATABASE_URL
+        fromDatabase:
+          name: search-analytic-rails
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
