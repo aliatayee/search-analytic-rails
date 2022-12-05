@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#articles {
+    width: 100%;
+    display: inherit;
+}
