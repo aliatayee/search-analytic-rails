@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def trends
-    @queries = Query.all
+    @queries = Query.where(user_id: session[:user_id])
   end
 
   def search
