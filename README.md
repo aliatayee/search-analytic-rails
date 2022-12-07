@@ -8,6 +8,8 @@
 - [ ] Ruby on Rails
 - [ ] Postgresql
 - [ ] TailwindCSS
+## Demo
+[Demo Link](https://search-analytic.onrender.com/) 
 
 ## screenshots
 ![image](https://user-images.githubusercontent.com/74867463/205667659-58455ff3-47f3-40a0-9e95-f0aa6c162d75.png)
@@ -18,7 +20,7 @@
 
 ### Install & Setup
 
-To setup and install this sample AlFa Blog project, follow the below steps:
+To setup and install the project, follow the below steps:
 - Clone this project by the command: 
   ```
   git clone https://github.com/aliatayee/search-analytic-rails
