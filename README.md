@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Ali-Atayee-gree?labelColor=red)&nbsp;![](https://img.shields.io/badge/Helpjuice-blue?labelColor=blue)&nbsp;
+![](https://img.shields.io/badge/Ali-Atayee-gree?labelColor=red)&nbsp;
 
 # Recipe App
 
